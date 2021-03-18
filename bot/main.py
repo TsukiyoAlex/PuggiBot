@@ -1,7 +1,7 @@
 import discord
 import os
-import pynacl
-import dnspython
+#import pynacl
+#import dnspython
 import server
 from discord.ext import commands
 
