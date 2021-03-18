@@ -4,16 +4,16 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="discordpy-replit-heroku",
+    name="puggi-bot",
     version="0.4.0",
-    author="John Doe",
-    author_email="johndo3@repl.email",
-    description="Hosting your repl based discord.py bot on Heroku to keep it running INDEFINETLY",
+    author="Tsukiyo Alex",
+    author_email="alexandros.aug@gmail.com",
+    description="Welcome to Gacha Life!",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/syntax-corp/discordpy-replit-heroku",
+    url="https://github.com/TsukiyoAlex/PuggiBot",
     project_urls={
-        "Issue tracker": "https://github.com/syntax-corp/discordpy-replit-heroku/issues",
+        "Issue tracker": "https://github.com/TsukiyoAlex/PuggiBot/issues",
     },
     packages=setuptools.find_packages(),
     classifiers=[
