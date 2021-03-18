@@ -9,14 +9,11 @@ from db import *
 import random
 from random import choices
 from discord.ext.commands import cooldown, BucketType
-
-help_command = commands.DefaultHelpCommand(
-    no_category = 'Commands'
-)
+from pretty_help import PrettyHelp
 
 bot = commands.Bot(command_prefix="+",
-description = 'Long live the gacha!',
-help_command = help_command)
+description = 'PuggiBot v1.0\nLong live the gacha!',
+help_command = PrettyHelp(no_category='Commands'))
 TOKEN = os.getenv("DISCORD_TOKEN")
 
 r = [p0, p1, p2, p3]
