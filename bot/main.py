@@ -4,7 +4,6 @@ import os
 #import dnspython
 import server
 import random
-import discord-pretty-help
 
 from discord.ext import commands
 from random import choices
