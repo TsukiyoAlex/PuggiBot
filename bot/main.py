@@ -12,13 +12,14 @@ from pretty_help import PrettyHelp
 from db import *
 
 bot = commands.Bot(command_prefix="+",
-description = 'PuggiBot v1.0\nLong live the gacha!',
-help_command = PrettyHelp())
+description = 'PuggiBot v1.0',
+help_command = PrettyHelp(no_category='Commands',show_index = False))
 TOKEN = os.getenv("DISCORD_TOKEN")
+no_category.description = 'Long live the gacha!'
 
 r = [p0, p1, p2, p3]
 w = [50, 35.5, 8.5, 6]
-  
+
 @bot.event
 async def on_ready():
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="you"))
