@@ -46,7 +46,7 @@ async def pull_error(ctx, error):
 
 @bot.command(name='rates', help='Check the rates for each rarity!')
 async def rates(ctx):
-    await ctx.send("N = ",w[0],"\nR = ",w[1],"\nSR = ",w[2],"\nSSR = ",w[3])
+    await ctx.send('N = '+str(w[0])+'\nR = '+str(w[1])+'\nSR = '+str(w[2])+'\nSSR = '+str(w[3]))
 
 server.server()
 bot.run(TOKEN)
