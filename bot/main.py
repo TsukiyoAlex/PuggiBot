@@ -9,6 +9,7 @@ from db import *
 import random
 from random import choices
 from discord.ext.commands import cooldown, BucketType
+from discord-pretty-help
 from pretty_help import PrettyHelp
 
 bot = commands.Bot(command_prefix="+",
