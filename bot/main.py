@@ -3,14 +3,14 @@ import os
 #import pynacl
 #import dnspython
 import server
-from discord.ext import commands
-from db import *
-
 import random
+import discord-pretty-help
+
+from discord.ext import commands
 from random import choices
 from discord.ext.commands import cooldown, BucketType
-from discord-pretty-help
 from pretty_help import PrettyHelp
+from db import *
 
 bot = commands.Bot(command_prefix="+",
 description = 'PuggiBot v1.0\nLong live the gacha!',
