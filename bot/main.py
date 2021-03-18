@@ -13,7 +13,7 @@ from db import *
 
 bot = commands.Bot(command_prefix="+",
 description = 'PuggiBot v1.0\nLong live the gacha!',
-help_command = PrettyHelp(no_category='Commands'))
+help_command = PrettyHelp())
 TOKEN = os.getenv("DISCORD_TOKEN")
 
 r = [p0, p1, p2, p3]
