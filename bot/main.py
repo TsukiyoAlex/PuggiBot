@@ -15,7 +15,7 @@ bot = commands.Bot(command_prefix="+",
 description = 'PuggiBot v1.0',
 help_command = PrettyHelp(no_category='Commands',show_index = False))
 TOKEN = os.getenv("DISCORD_TOKEN")
-no_category.description = 'Long live the gacha!'
+bot.help_command.no_category.description = 'Long live the gacha!'
 
 r = [p0, p1, p2, p3]
 w = [50, 35.5, 8.5, 6]
