@@ -1,9 +1,10 @@
-x0='https://pbs.twimg.com/media/Ewm6ZVuWYAs4ri4?format=jpg&name=large'
-x1='https://pbs.twimg.com/media/Ewm6YMAXAAI9IU3?format=jpg&name=large'
-x2='https://pbs.twimg.com/media/Ewm6aiqWgAQk19v?format=jpg&name=large'
-x3='https://pbs.twimg.com/media/EwH9Cs1XYAQY8Pq?format=jpg&name=large'
-x4='https://pbs.twimg.com/media/EwH9BTWXcAQFjUV?format=jpg&name=large'
+x0='https://i.postimg.cc/8cp2zY6s/Ew-H9-BTWXc-AQFj-UV.jpg'
+x1='https://i.postimg.cc/xjgr49wm/Ewm6aiq-Wg-AQk19v.jpg'
+x2='https://i.postimg.cc/PJ57j8gw/Ew-H9-Cs1-XYAQY8-Pq.jpg'
+x3='https://i.postimg.cc/sD8NkxwM/Ewm6-YMAXAAI9-IU3.jpg'
+x4='https://i.postimg.cc/283t9hFp/Ewm6-ZVu-WYAs4ri4.jpg'
 
-p0 = [x4]
-p1 = [x2]
-p2 = [x0,x1,x3]
+p0 = [x0]
+p1 = [x1]
+p2 = [x2]
+p3 = [x3,x4]
