@@ -4,12 +4,12 @@ import os
 #import dnspython
 import server
 import random
-import puggibotdb
 
 from discord.ext import commands
 from random import choices
 from discord.ext.commands import cooldown, BucketType
 from pretty_help import PrettyHelp
+from puggibotdb import *
 
 bot = commands.Bot(command_prefix="+",
 description = 'PuggiBot v1.0',
