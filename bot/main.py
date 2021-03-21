@@ -17,7 +17,7 @@ help_command = PrettyHelp(no_category='Commands',show_index = False))
 TOKEN = os.getenv("DISCORD_TOKEN")
 
 r = [p0, p1, p2, p3]
-w = [25, 17.75, 29.875, 27.375]
+w = [50, 25.5, 18.5, 6]
 
 @bot.event
 async def on_ready():
