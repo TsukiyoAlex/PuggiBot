@@ -21,7 +21,7 @@ w = [50, 25.5, 18.5, 6]
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="you"))
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="https://youtu.be/7YvAYIJSSZY"))
     print(f"Logged in as {bot.user.name}({bot.user.id})")
 
 @bot.command(name='ping', help='IT WORKS!')
