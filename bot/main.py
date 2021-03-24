@@ -4,6 +4,7 @@ import os
 #import dnspython
 import server
 import random
+import datetime
 
 from discord.ext import commands
 from random import choices
@@ -42,7 +43,8 @@ async def pull(ctx):
 @pull.error
 async def pull_error(ctx, error):
     if isinstance(error, commands.CommandOnCooldown):
-        msg = '<:puggiFIRE:808672592550297631> PUGGI IS ON FIRE! Cooldown in **{:.2f}** seconds!'.format(error.retry_after)
+        sec = error.retry_after
+        msg = '<:puggiFIRE:808672592550297631> PUGGI IS ON FIRE! Cooldown in'+str(datetime.timedelta(seconds=sec))
         await ctx.send(msg)
     else:
         raise error
