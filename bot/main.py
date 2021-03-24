@@ -49,7 +49,7 @@ async def pull_error(ctx, error):
         else:
           minut = sec // 60
           sec2 = sec % 60
-          msg = '<:puggiFIRE:808672592550297631> PUGGI IS ON FIRE! Cooldown in **{:}** minutes and **{:.2f}** seconds!'.format(minut,sec2)
+          msg = '<:puggiFIRE:808672592550297631> PUGGI IS ON FIRE! Cooldown in **{:.0f}** minutes and **{:.2f}** seconds!'.format(minut,sec2)
         await ctx.send(msg)
     else:
         raise error
