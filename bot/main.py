@@ -45,11 +45,11 @@ async def pull_error(ctx, error):
     if isinstance(error, commands.CommandOnCooldown):
         sec = error.retry_after
         if(sec < 60):
-          msg = '<:puggiFIRE:808672592550297631> PUGGI IS ON FIRE! Cooldown in **{:.2f}** seconds!'.format(sec)
+          msg = '<:puggiFIRE:808672592550297631> PUGGI IS ON FIRE! Cooldown in **{:.0f}** seconds!'.format(sec)
         else:
           minut = sec // 60
           sec2 = sec % 60
-          msg = '<:puggiFIRE:808672592550297631> PUGGI IS ON FIRE! Cooldown in **{:.0f}** minutes and **{:.2f}** seconds!'.format(minut,sec2)
+          msg = '<:puggiFIRE:808672592550297631> PUGGI IS ON FIRE! Cooldown in **{:.0f}** minutes and **{:.0f}** seconds!'.format(minut,sec2)
         await ctx.send(msg)
     else:
         raise error
