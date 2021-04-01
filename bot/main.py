@@ -22,13 +22,13 @@ TOKEN = os.getenv("DISCORD_TOKEN")
 #w = [50, 25.5, 18.5, 6]
 
 r = [puggi, pang]
-miracle = 1/2578917
+miracle = 1/257.8917
 common = 1 - miracle
 w = [common, miracle]
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="https://youtu.be/7YvAYIJSSZY"))
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="you suffer"))
     print(f"Logged in as {bot.user.name}({bot.user.id})")
 
 @bot.command(name='ping', help='IT WORKS!')
@@ -39,7 +39,7 @@ async def ping(ctx):
     s = random.choice(e)
     await ctx.send(s)
 
-@bot.command(name='pull', help='Pulls a random image. Only 10 pulls per hour allowed for each user!')
+@bot.command(name='pull', help='Pulls a random image. Only 10 pulls every 3 minutes allowed for each user!')
 @commands.cooldown(10, 180, commands.BucketType.user)
 async def pull(ctx):
     #x = random.choices(r,w)
