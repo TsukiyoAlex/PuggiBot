@@ -72,7 +72,7 @@ async def rates(ctx):
     #await ctx.send('<:star_N:822188326114557984> = '+str(w[0])+'%\n<:star_R:822188398965293186> = '+str(w[1])+'%\n<:star_SR:822188419853058070> = '+str(w[2])+'%\n<:star_SSR:822188441361055774> = '+str(w[3])+'%')
     common_rate = common*100
     miracle_rate = miracle*100
-    await ctx.send('<:puggihandsome:808627398794018827> = '+str(common_rate)+'%\n<:pangblush:686774020443602944> = '+str(miracle_rate)+'%')
+    await ctx.send('<:puggihandsome:808627398794018827> = '+str(common_rate)+'%\n<:pangblush:649970659358933002> = '+str(miracle_rate)+'%')
 
 server.server()
 bot.run(TOKEN)
