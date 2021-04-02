@@ -10,21 +10,15 @@ from discord.ext import commands
 from random import choices
 from discord.ext.commands import cooldown, BucketType
 from pretty_help import PrettyHelp
-#from puggibotdb import *
-from aprilfools import *
+from puggibotdb import *
 
 bot = commands.Bot(command_prefix="+",
-description = 'PuggiBot v1.1.4.1',
+description = 'PuggiBot v1.2',
 help_command = PrettyHelp(no_category='Commands',show_index = False))
 TOKEN = os.getenv("DISCORD_TOKEN")
 
-#r = [p0, p1, p2, p3]
-#w = [50, 25.5, 18.5, 6]
-
-r = [puggi, pang]
-miracle = 1/257.8917
-common = 1 - miracle
-w = [common, miracle]
+r = [p0, p1, p2, p3]
+w = [50, 25.5, 18.5, 6]
 
 @bot.event
 async def on_ready():
@@ -39,19 +33,12 @@ async def ping(ctx):
     s = random.choice(e)
     await ctx.send(s)
 
-@bot.command(name='pull', help='Pulls a random image. Only 10 pulls every 3 minutes allowed for each user!')
-@commands.cooldown(10, 180, commands.BucketType.user)
+@bot.command(name='pull', help='Pulls a random image. Max 10 images per hour for each user!')
+@commands.cooldown(10, 3600, commands.BucketType.user)
 async def pull(ctx):
-    #x = random.choices(r,w)
-    #y = random.choice(x[0])
-    #await ctx.send(y)
     x = random.choices(r,w)
     y = random.choice(x[0])
-    if (x[0] == pang):
-      await ctx.send('<@303857311233867776>')
-      await ctx.send(y)
-    else:
-      await ctx.send(y)
+    await ctx.send(y)
 
 @pull.error
 async def pull_error(ctx, error):
@@ -69,10 +56,7 @@ async def pull_error(ctx, error):
 
 @bot.command(name='rates', help='Check the rates for each rarity!')
 async def rates(ctx):
-    #await ctx.send('<:star_N:822188326114557984> = '+str(w[0])+'%\n<:star_R:822188398965293186> = '+str(w[1])+'%\n<:star_SR:822188419853058070> = '+str(w[2])+'%\n<:star_SSR:822188441361055774> = '+str(w[3])+'%')
-    common_rate = common*100
-    miracle_rate = miracle*100
-    await ctx.send('<:puggihandsome:808627398794018827> = '+str(common_rate)+'%\n<:pangblush:649970659358933002> = '+str(miracle_rate)+'%')
+    await ctx.send('<:star_N:822188326114557984> = '+str(w[0])+'%\n<:star_R:822188398965293186> = '+str(w[1])+'%\n<:star_SR:822188419853058070> = '+str(w[2])+'%\n<:star_SSR:822188441361055774> = '+str(w[3])+'%')
 
 server.server()
 bot.run(TOKEN)
