@@ -17,13 +17,14 @@ description = 'PuggiBot v1.2.5',
 help_command = PrettyHelp(no_category='Commands',show_index = False))
 TOKEN = os.getenv("DISCORD_TOKEN")
 
+global counting = 0
+r = [p0, p1, p2, p3]
+w = [50, 25.5, 18.5, 6]
+
 @bot.event
 async def on_ready():
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="you suffer"))
     print(f"Logged in as {bot.user.name}({bot.user.id})")
-    counting = 0
-    r = [p0, p1, p2, p3]
-    w = [50, 25.5, 18.5, 6]
 
 @bot.command(name='ping', help='IT WORKS!')
 async def ping(ctx):
