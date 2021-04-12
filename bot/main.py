@@ -13,10 +13,11 @@ from pretty_help import PrettyHelp
 from puggibotdb import *
 
 bot = commands.Bot(command_prefix="+",
-description = 'PuggiBot v1.2',
+description = 'PuggiBot v1.2.5',
 help_command = PrettyHelp(no_category='Commands',show_index = False))
 TOKEN = os.getenv("DISCORD_TOKEN")
 
+counting = 0
 r = [p0, p1, p2, p3]
 w = [50, 25.5, 18.5, 6]
 
@@ -36,8 +37,14 @@ async def ping(ctx):
 @bot.command(name='pull', help='Pulls a random image. Max 10 images per hour for each user!')
 @commands.cooldown(10, 3600, commands.BucketType.user)
 async def pull(ctx):
-    x = random.choices(r,w)
-    y = random.choice(x[0])
+    if (counting < 10)
+      x = random.choices(r,w)
+      y = random.choice(x[0])
+      counting += 1
+    else
+      y = random.choice(v)
+      counting = 0
+
     await ctx.send(y)
 
 @pull.error
@@ -50,6 +57,9 @@ async def pull_error(ctx, error):
           minut = sec // 60
           sec2 = sec % 60
           msg = '<:puggiFIRE:808672592550297631> PUGGI IS ON FIRE! Cooldown in **{:.0f}** minutes and **{:.0f}** seconds!'.format(minut,sec2)
+
+        y = random.choice
+        await ctx.send()
         await ctx.send(msg)
     else:
         raise error
