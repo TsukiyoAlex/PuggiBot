@@ -17,7 +17,8 @@ description = 'PuggiBot v1.2.5',
 help_command = PrettyHelp(no_category='Commands',show_index = False))
 TOKEN = os.getenv("DISCORD_TOKEN")
 
-global counting = 0
+global counting
+counting = 0
 r = [p0, p1, p2, p3]
 w = [50, 25.5, 18.5, 6]
 
