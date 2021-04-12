@@ -37,11 +37,11 @@ async def ping(ctx):
 @bot.command(name='pull', help='Pulls a random image. Max 10 images per hour for each user!')
 @commands.cooldown(10, 3600, commands.BucketType.user)
 async def pull(ctx):
-    if counting < 10
+    if (counting < 10):
       x = random.choices(r,w)
       y = random.choice(x[0])
-      counting += 1
-    else
+      counting = counting + 1
+    else:
       y = random.choice(v)
       counting = 0
 
