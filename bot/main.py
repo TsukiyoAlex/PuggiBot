@@ -45,7 +45,7 @@ async def hello(ctx):
     member = ctx.author
     role = discord.utils.get(member.guild.roles, name="Fredrica")
     if(member.id == 303857311233867776):
-    await member.add_roles(role)
+      await member.add_roles(role)
     else:
       await ctx.send("Invalid!")
 
