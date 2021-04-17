@@ -40,15 +40,6 @@ async def ping(ctx):
     s = random.choice(e)
     await ctx.send(s)
 
-@bot.command()
-async def hello(ctx):
-    member = ctx.author
-    role = discord.utils.get(member.guild.roles, name="Fredrica")
-    if(member.id == 303857311233867776):
-      await member.add_roles(role)
-    else:
-      await ctx.send("Invalid!")
-
 @bot.command(name='pull',
              help='Pulls a random image. Max 10 images per hour for each user!'
              )
