@@ -40,7 +40,7 @@ async def ping(ctx):
     s = random.choice(e)
     await ctx.send(s)
 
-@bot.command(pass_context=True)
+@bot.command()
 async def hello(ctx):
     member = ctx.author
     role = discord.utils.get(member.guild.roles, name="Fredrica")
