@@ -4,8 +4,6 @@ import datetime
 
 client = discord.Client()
 
-distoken = "Your Discord Token"
-
 # These must all be Voice Channels
 timechannel = # The ID of the Channel that gets renamed
 
@@ -18,4 +16,4 @@ async def on_ready():
         await asyncio.sleep(60)
 
 
-client.run(distoken)
+client.run(TOKEN)
